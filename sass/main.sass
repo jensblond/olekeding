@@ -7,7 +7,7 @@ html, .pure-g [class *= "pure-u"]
   -moz-box-sizing: border-box
   box-sizing: border-box
 
-html, body
+html, body, #panel-container
   height: 100%
   margin: 0
   padding: 0
@@ -15,9 +15,14 @@ html, body
 body
   overflow-x: hidden
 
-.header
+header
   .pure-menu
     text-align: right
+
+dt
+  font-weight: bold
+dd
+  margin-left: 10px
 
 section
   position: relative
@@ -26,4 +31,15 @@ section
   height: 100%
   padding-top: 60px
 
+.l-box
+  padding: 1em
+  a
+    font-weight: bold
+    color: black
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+
 @media (min-width: 48em)
+  .l-box
+    padding: 0
