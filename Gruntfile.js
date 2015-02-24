@@ -104,7 +104,18 @@ module.exports = function(grunt) {
           'css/main.css': 'sass/main.sass'
         }
       }
-    }
+    },
+    copy: {
+      main: {
+        files: [
+          // includes files within path
+          {expand: true, src: ['css/*'], dest: 'deploy/'},
+          {expand: true, src: ['img/*'], dest: 'deploy/'},
+          {expand: true, src: ['js/*'], dest: 'deploy/'},
+          {expand: false, src: 'page.html', dest: 'deploy/index.html'}
+        ]
+      }
+    },
   });
 
   // These plugins provide necessary tasks.
@@ -115,7 +126,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-slim');
   grunt.loadNpmTasks('grunt-contrib-sass');
-
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  
   // Default task.
   grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
 
