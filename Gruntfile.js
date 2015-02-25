@@ -86,8 +86,7 @@ module.exports = function(grunt) {
           pretty: 'true'
         },
         files: {
-          'index.html': 'index.slim',
-          'page.html': [
+          'index.html': [
             'header.slim',
             'body.slim',
             'footer.slim'  // Maybe you need one extra file in dev 

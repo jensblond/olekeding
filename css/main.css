@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Nunito:400,700);
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,700);
 html, .pure-g [class*="pure-u"] {
   font-family: "Nunito", sans-serif;
   font-size: 14px;
@@ -22,6 +22,18 @@ body {
 
 header .pure-menu {
   text-align: right;
+  border: none;
+}
+header .pure-menu li a:hover {
+  background-color: #336633;
+  color: black;
+}
+header .pure-menu li a.active {
+  background-color: #336633;
+  color: black;
+}
+header .pure-menu.pure-menu-open.pure-menu-fixed {
+  border: none;
 }
 
 dt {
@@ -49,6 +61,7 @@ section {
 
 .l-box {
   padding: 1em;
+  line-height: 30px;
 }
 .l-box a {
   font-weight: bold;
@@ -59,10 +72,10 @@ section {
   text-decoration: underline;
 }
 
-.pure-img {
-  width: 50%;
-  height: 50%;
-  display: block;
+.green {
+  height: 90%;
+  background-color: #336633;
+  margin-bottom: 100px;
 }
 
 @media (min-width: 48em) {
