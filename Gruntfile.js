@@ -89,7 +89,12 @@ module.exports = function(grunt) {
           'index.html': [
             'header.slim',
             'body.slim',
-            'footer.slim'  // Maybe you need one extra file in dev 
+            'footer.slim'
+          ],
+          'imprint.html': [
+            'header.slim',
+            'imprint.slim',
+            'footer.slim'
           ]
         }
       }
@@ -111,7 +116,8 @@ module.exports = function(grunt) {
           {expand: true, src: ['css/*'], dest: 'deploy/'},
           {expand: true, src: ['img/*'], dest: 'deploy/'},
           {expand: true, src: ['js/*'], dest: 'deploy/'},
-          {expand: false, src: 'page.html', dest: 'deploy/index.html'}
+          {expand: true, src: 'index.html', dest: 'deploy/'},
+          {expand: true, src: 'imprint.html', dest: 'deploy/'}
         ]
       }
     },

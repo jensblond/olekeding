@@ -24,7 +24,7 @@ $(function() {
     $menu: $('header .pure-menu'),
     panelSelector: 'section',
     easing: 'easeOutBack',
-    offset: 60,
+    offset: 33,
     keyboardNavigation: {
       enabled: true,
       nextPanelKey: 40,
@@ -32,5 +32,7 @@ $(function() {
       wrapAround: true
     }
   };
-  $('body').panelSnap(options);
+  if (! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $('body').panelSnap(options);
+  }
 });
