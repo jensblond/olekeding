@@ -25,12 +25,12 @@ header .pure-menu {
   border: none;
 }
 header .pure-menu li a:hover {
-  background-color: #336633;
-  color: black;
+  background-color: black;
+  color: white;
 }
 header .pure-menu li a.active {
-  background-color: #336633;
-  color: black;
+  background-color: black;
+  color: white;
 }
 header .pure-menu.pure-menu-open.pure-menu-fixed {
   border: none;
@@ -64,6 +64,9 @@ section {
   padding: 1em;
   line-height: 28px;
 }
+.l-box h1 {
+  font-size: 2.4em;
+}
 .l-box a {
   font-weight: bold;
   color: black;
@@ -88,8 +91,7 @@ section {
 
   .l-box {
     padding: 0;
-    line-height: 24px;
-    font-size: 18px;
+    font-size: 22px;
   }
 
   section {
